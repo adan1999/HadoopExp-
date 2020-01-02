@@ -1,0 +1,5 @@
+hadoop\MovieMapper.class
+hadoop\Movieinfo.class
+hadoop\MovieMain.class
+hadoop\MovieReduce.class
+hadoop\App.class
