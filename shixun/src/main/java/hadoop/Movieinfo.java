@@ -17,7 +17,8 @@ public class Movieinfo implements WritableComparable<Movieinfo> {
     private String film_page;
     @Override
     public String toString() {
-		return "信息：{title=" + title + ", year=" + year + ", type=" + type + ", star=" + star + ",film_page=" + film_page+ "}";
+		return "信息：{title=" + title + ", year=" + year + ", type=" +
+                type + ", star=" + star + ",film_page=" + film_page+ "}";
     }
     public  int compareTo(Movieinfo o){
         if(this.star > o.getStar()) {

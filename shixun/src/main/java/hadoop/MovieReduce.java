@@ -9,15 +9,10 @@ public class MovieReduce extends Reducer<Movieinfo, NullWritable,Movieinfo,NullW
     int count=0;
     protected void reduce(Movieinfo k3,Iterable<NullWritable> v3,Context context)
             throws IOException,InterruptedException{
-        //利用一个for循环，若计数大于等于5，则跳出循环。否则则，将数据写入context
-        for(NullWritable nullWritable: v3){
-            if (count>=5) {
-                break;
-            }else{
+        //利用一个if判断语句，若count小于5，则执行下面的代码，将数据作为<k4,v4>写入context。
+            if (count<5) {
                 context.write(k3, NullWritable.get());
                 count++;
             }
         }
-
     }
-}

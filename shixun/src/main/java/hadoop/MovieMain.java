@@ -28,7 +28,7 @@ public class MovieMain{
         //指定job的输入和输出
         FileInputFormat.setInputPaths(job,new Path(args[0]));
         FileOutputFormat.setOutputPath(job,new Path(args[1]));
-        //执行job
+        //执行job，等待任务并打印进度
         job.waitForCompletion(true);
     }
 }
